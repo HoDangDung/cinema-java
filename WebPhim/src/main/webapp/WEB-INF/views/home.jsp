@@ -1,92 +1,139 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              rel="stylesheet">
-        <title>Movies</title>
-        <link rel="stylesheet" href="./asset/user/css/style.css">
-    </head>
-    <body>
-
-        <div class="container">
-            <div class="left">
-                <p>Media</p>
-                <div class="flow home">
-                    <span class="material-icons">home </span>
-                    <h2>Home</h2>
-                </div>
-                <div class="flow">
-                    <span class="material-icons">movie_filter </span>
-                    <h2>Movie</h2>
-                </div>
-                <div class="flow">
-                    <span class="material-icons">tv </span>
-                    <h2>Tv</h2>
-                </div>
-                <div class="flow">
-                    <span class="material-icons">search </span>
-                    <h2>search</h2>
-                </div>
-                <p>account</p>
-                <div class="flow">
-                    <span class="material-icons">account_circle </span>
-                    <h2>sign in</h2>
-                </div>
-            </div>
-
-            <div class="right">
-                <div class="heading">
-                    <div class="head-content">
-                        <h2>Fantasy island</h2>
-                        <div class="rating">
-                            <div class="btn"><span class="material-icons">movie_filter</span><span>2021</span></div>
-                            <div class="btn"><span class="material-icons star">star</span><span>26.1</span></div>
-                        </div>
-                        <p>A group of content viewrs arrive at an island hotel to live out their dreams, only to find themeselves trapped in nightmare scenarios.</p>
-                        <a href="#" class="btn btn-main">check more</a>
-                    </div>
-                    <div class="img-container">
-
-                    </div>
-                </div>
-
-
-                <div class="trending">
-                    <h1>Trending Movies <span>see all</span></h1>
-
-                    <div class="movie-container">
-                        <a href="movie1" target="_blank">
-                            <div class="list">
-                            </div>
-                        </a>
-
-                        <div class="list"></div>
-                        <div class="list"></div>
-                        <div class="list"></div>
-                        <div class="list"></div>
-                    </div>
-                </div>
-                <div class="trending">
-                    <h1>Trending Movies <span>see all</span></h1>
-
-                    <div class="movie-container tv">
-                        <div class="list"></div>
-                        <div class="list"></div>
-                        <div class="list"></div>
-                        <div class="list"></div>
-                        <div class="list"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- JS -->
-        <script src="js/main.js"></script>
-
-    </body>
-</html>
+<jsp:include page="header.jsp" />
+<section class="banner-section">
+	<div class="banner-bg bg-fixed"
+		style="background: url('./assets/img/banner/banner-1.jpg')"></div>
+	<div class="container">
+		<div class="banner-content">
+			<h1 class="title  cd-headline clip">
+				<span class="d-block">Galaxy Play</span> for <span
+					class="color-theme cd-words-wrapper p-0 m-0"> <b
+					class="is-visible">Movie</b>
+				</span>
+			</h1>
+		</div>
+	</div>
+</section>
+<section class="search-ticket-section padding-top pt-lg-0">
+	<div class="container">
+		<div class="search-tab">
+			<div class="row align-items-center mb--20">
+				<div class="col-lg-6 mb-20">
+					<div class="search-ticket-header">
+						<h6 class="category">search movies</h6>
+						<h3 class="title">find your movies now</h3>
+					</div>
+				</div>
+				<div class="tab-item active">
+					<form class="ticket-search-form" method="get" action="movies.php">
+						<div class="form-group large">
+							<input type="text" placeholder="Find moive..." name="keyword" />
+							<button type="submit">
+								<i class="fas fa-search"></i>
+							</button>
+						</div>
+						<div class="form-group">
+							<div class="thumb">
+								<button type="submit" class="filter-btn">
+									<i class="far fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="movie-section padding-top bg-two">
+	<div class="container">
+		<div class="row flex-wrap-reverse justify-content-center">
+			<div class="col-lg-12">
+				<div class="article-section padding-bottom">
+					<div class="section-header-1">
+						<h2 class="title">movies</h2>
+						<a class="view-more" href="?">View More <i
+							class="fal fa-long-arrow-alt-right"></i>
+						</a>
+					</div>
+					<div class="row mb-30-none justify-content-center">
+						<div class="col-sm-6 col-lg-4">
+							<div class="movie-grid">
+								<div class="movie-thumb c-thumb" style="height: 500px">
+									<a href="moviedetails"> <img
+										src="./assets/img/movie/movie.jpg"
+										alt="movie">
+									</a>
+								</div>
+								<div class="movie-content">
+									<h5 class="title m-0">
+										<a href="moviedetails"
+											style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 300px;"
+											title=""> Transporter 2</a>
+									</h5>
+									<ul class="movie-rating-percent">
+										<li>
+											<!-- <i class="fal fa-shopping-cart"></i>
+                                                <span class="content">88.8k</span> -->
+										</li>
+										<li><i class="fal fa-star"></i> <span class="content">5.0</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<div class="movie-grid">
+								<div class="movie-thumb c-thumb" style="height: 500px">
+									<a href="moviedetails1"> <img
+										src="./assets/img/movie/movie1.jpg" alt="movie">
+									</a>
+								</div>
+								<div class="movie-content">
+									<h5 class="title m-0">
+										<a href="moviedetails1"
+											style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 300px;"
+											title="">Avengers: Infinity War</a>
+									</h5>
+									<ul class="movie-rating-percent">
+										<li>
+											<!-- <i class="fal fa-shopping-cart"></i>
+                                                <span class="content">88.8k</span> -->
+										</li>
+										<li><i class="fal fa-star"></i> <span class="content">5.0</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-4">
+							<div class="movie-grid">
+								<div class="movie-thumb c-thumb" style="height: 500px">
+									<a href="moviedetails2"> <img
+										src="./assets/img/movie/movie2.jpg"
+										alt="movie">
+									</a>
+								</div>
+								<div class="movie-content">
+									<h5 class="title m-0">
+										<a href="moviedetails2"
+											style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 300px;"
+											title="">Thor: Love and Thunder</a>
+									</h5>
+									<ul class="movie-rating-percent">
+										<li>
+											<!-- <i class="fal fa-shopping-cart"></i>
+                                                <span class="content">88.8k</span> -->
+										</li>
+										<li><i class="fal fa-star"></i> <span class="content">5.0</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<jsp:include page="footer.jsp" />
